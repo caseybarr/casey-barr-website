@@ -27,8 +27,7 @@ const FadeIn = ({
 }) => {
   const [ref, isVisible] = useInView();
   return (
-    <div
-      ref={ref}
+    <div      ref={ref}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(24px)",
@@ -56,17 +55,22 @@ const ExternalIcon = () => (
     <line x1="10" y1="14" x2="21" y2="3" />
   </svg>
 );
-
 const LinkedInIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
 );
 
+const EMOJIS: Record<string, string> = {
+  target: String.fromCodePoint(0x1F3AF),
+  compass: String.fromCodePoint(0x1F9ED),
+  fire: String.fromCodePoint(0x1F525),
+};
+
 const experiences = [
   {
     company: "Redwood Software",
-    role: "Engagement Manager â Enterprise AI & Automation",
+    role: "Engagement Manager, Enterprise AI & Automation",
     desc: "activating enterprise automation across Fortune 500 portfolios",
     current: true,
   },
@@ -77,10 +81,9 @@ const experiences = [
   },
   {
     company: "Booz Allen Hamilton",
-    role: "Senior Consultant â Defense & Intelligence",
+    role: "Senior Consultant, Defense & Intelligence",
     desc: "led technology modernization for federal agencies with security clearance",
-  },
-  {
+  },  {
     company: "Gentiva Health Services",
     role: "Business Intelligence & Operations",
     desc: "built analytics capabilities from scratch across 500+ home health locations",
@@ -92,26 +95,25 @@ const ventures = [
     name: "Shortlist.ai",
     status: "Live",
     statusColor: "#059669",
-    desc: "AI-powered job search platform that turns career context into strategy. Not another resume tool â a system that thinks with you.",
+    desc: "AI-powered job search platform that turns career context into strategy. Not another resume tool. A system that thinks with you.",
     url: "https://shortlist-ai.io",
-    emoji: "ð¯",
+    emoji: "target",
   },
   {
     name: "Do North Strategy",
     status: "Active",
     statusColor: "#2563eb",
     desc: "Advisory for leaders navigating AI adoption. Helping orgs treat deployment as behavior change, not technology rollout.",
-    emoji: "ð§­",
+    emoji: "compass",
   },
   {
     name: "The Forge",
     status: "Seeding",
     statusColor: "#9333ea",
-    desc: "Men's leadership and emotional development. Helping men who built careers on competence learn to lead from connection.",
-    emoji: "ð¥",
+    desc: "Men&apos;s leadership and emotional development. Helping men who built careers on competence learn to lead from connection.",
+    emoji: "fire",
   },
 ];
-
 const companyGroups = [
   {
     industry: "Technology & Cloud",
@@ -140,8 +142,7 @@ const companyGroups = [
   {
     industry: "Pharma & Life Sciences",
     companies: [
-      { name: "Merck", logo: "https://logo.clearbit.com/merck.com" },
-      {
+      { name: "Merck", logo: "https://logo.clearbit.com/merck.com" },      {
         name: "Bristol-Myers Squibb",
         logo: "https://logo.clearbit.com/bms.com",
       },
@@ -170,8 +171,7 @@ const companyGroups = [
       { name: "Nike", logo: "https://logo.clearbit.com/nike.com" },
       {
         name: "Chedraui",
-        logo: "https://logo.clearbit.com/chedraui.com.mx",
-      },
+        logo: "https://logo.clearbit.com/chedraui.com.mx",      },
     ],
   },
   {
@@ -195,13 +195,12 @@ const contentLinks = [
   {
     title: "LinkedIn",
     type: "Writing",
-    desc: "Where I think out loud about enterprise AI adoption, the displacement nobody's talking about, and building in public.",
+    desc: "Where I think out loud about enterprise AI adoption, the displacement nobody is talking about, and building in public.",
     color: "#0369a1",
   },
-  {
-    title: "Shortlist.ai Blog",
+  {    title: "Shortlist.ai Blog",
     type: "Product",
-    desc: "Deep dives on the job search system â what's broken, what AI actually fixes, and what it can't.",
+    desc: "Deep dives on the job search system: what is broken, what AI actually fixes, and what it cannot.",
     color: "#059669",
   },
 ];
@@ -227,8 +226,7 @@ export default function CaseyBarrSite() {
                   fontFamily: "'DM Serif Display', serif",
                   fontSize: "clamp(48px, 8vw, 72px)",
                   lineHeight: 1.05,
-                  background:
-                    "linear-gradient(135deg, #92400e 0%, #c2410c 40%, #9a3412 100%)",
+                  background:                    "linear-gradient(135deg, #92400e 0%, #c2410c 40%, #9a3412 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   marginBottom: 20,
@@ -246,19 +244,18 @@ export default function CaseyBarrSite() {
                 }}
               >
                 I&apos;ve spent a decade getting Fortune 500s to actually use the
-                software they buy â 60+ deployments across Boeing, Nike, Morgan
+                software they buy. 60+ deployments across Boeing, Nike, Morgan
                 Stanley, you name it. Somewhere around deployment forty I started
                 noticing: every automation I activated made someone&apos;s role
                 smaller. So now I&apos;m building for both sides.{" "}
                 <strong style={{ color: "#92400e" }}>
-                  Technology changes systems â people change everything else.
+                  Technology changes systems. People change everything else.
                 </strong>
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
                 <a
                   href="https://www.linkedin.com/in/caseyabarr"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank"                  rel="noopener noreferrer"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -287,8 +284,7 @@ export default function CaseyBarrSite() {
                     background: "white",
                     color: "#44403c",
                     padding: "12px 24px",
-                    borderRadius: 12,
-                    fontSize: 15,
+                    borderRadius: 12,                    fontSize: 15,
                     fontWeight: 600,
                     textDecoration: "none",
                     border: "1.5px solid #d6cdc5",
@@ -317,8 +313,7 @@ export default function CaseyBarrSite() {
                   <ExternalIcon /> The Wayfinder
                 </a>
               </div>
-            </div>
-            <div style={{ flex: "0 0 auto" }}>
+            </div>            <div style={{ flex: "0 0 auto" }}>
               <div
                 style={{
                   width: 240,
@@ -347,8 +342,7 @@ export default function CaseyBarrSite() {
                     textAlign: "center",
                     padding: 20,
                   }}
-                >
-                  [ your headshot here ]
+                >                  [ your headshot here ]
                 </div>
               </div>
             </div>
@@ -377,8 +371,7 @@ export default function CaseyBarrSite() {
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 4, flexWrap: "wrap" }}>
                   <strong style={{ fontSize: 16, color: "#292524" }}>
-                    {exp.role} â {exp.company}
-                  </strong>
+                    {exp.role} | {exp.company}                  </strong>
                   {exp.current && (
                     <span
                       style={{
@@ -407,8 +400,7 @@ export default function CaseyBarrSite() {
         <FadeIn>
           <h2 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 32, textAlign: "center", color: "#292524", marginBottom: 8 }}>What I&apos;m Building</h2>
           <p style={{ textAlign: "center", color: "#78716c", marginBottom: 32, fontSize: 16 }}>Three ventures across a single AI transition thesis</p>
-        </FadeIn>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
+        </FadeIn>        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
           {ventures.map((v, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div
@@ -423,7 +415,7 @@ export default function CaseyBarrSite() {
                 }}
                 onClick={() => v.url && window.open(v.url, "_blank")}
               >
-                <div style={{ fontSize: 32, marginBottom: 12 }}>{v.emoji}</div>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{EMOJIS[v.emoji] || v.emoji}</div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
                   <h3 style={{ fontSize: 20, fontWeight: 700, color: "#292524" }}>{v.name}</h3>
                   <span
@@ -559,14 +551,14 @@ export default function CaseyBarrSite() {
             }}
           >
             <p style={{ fontSize: 17, color: "#44403c", lineHeight: 1.8, marginBottom: 20 }}>
-              I&apos;m a builder who ended up in enterprise software â and I keep finding
+              I&apos;m a builder who ended up in enterprise software, and I keep finding
               ways to build things anyway. Redwood pays me to activate automation
               strategies across Fortune 500s. But the thing that gets me out of bed is
               the question nobody in those boardrooms is asking:{" "}
               <em>what happens to the people on the other side of all this efficiency?</em>
             </p>
             <p style={{ fontSize: 17, color: "#44403c", lineHeight: 1.8, marginBottom: 20 }}>
-              That question turned into Shortlist.ai â a job search tool I&apos;m building
+              That question turned into Shortlist.ai, a job search tool I&apos;m building
               because I watched the existing ones fail everyone I know. It turned into a
               newsletter called The Wayfinder. And eventually it&apos;ll turn into The Forge,
               a program for men trying to figure out who they are when the title stops
@@ -574,10 +566,10 @@ export default function CaseyBarrSite() {
             </p>
             <p style={{ fontSize: 17, color: "#44403c", lineHeight: 1.8 }}>
               Outside of all that: I&apos;m a dad to Lily, a husband, and someone who
-              believes the non-negotiables ARE the strategy â family, fitness, sleep.
+              believes the non-negotiables ARE the strategy: family, fitness, sleep.
               I&apos;m based in LA. I read too many macro research reports. And I&apos;m
               convinced the most important skill of the next decade isn&apos;t prompting
-              AI â it&apos;s knowing who you are without a job title.
+              AI. It&apos;s knowing who you are without a job title.
             </p>
           </div>
         </FadeIn>
@@ -591,7 +583,7 @@ export default function CaseyBarrSite() {
             <a href="https://shortlist-ai.io" target="_blank" rel="noopener noreferrer" style={{ color: "#78716c", textDecoration: "none" }}>Shortlist.ai</a>
             <a href="mailto:caseybarrman@gmail.com" style={{ color: "#78716c", textDecoration: "none" }}>Email</a>
           </div>
-          <p>Casey Barr â Los Angeles, CA</p>
+          <p>Casey Barr | Los Angeles, CA</p>
         </div>
       </FadeIn>
     </div>
