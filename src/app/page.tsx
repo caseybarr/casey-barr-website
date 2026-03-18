@@ -328,22 +328,15 @@ export default function CaseyBarrSite() {
                   overflow: "hidden",
                 }}
               >
-                <div
+                <img
+                  src="/casey-barr.jpg"
+                  alt="Casey Barr"
                   style={{
                     width: "100%",
                     height: "100%",
-                    background: "linear-gradient(135deg, #92400e22, #c2410c11)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: 14,
-                    color: "#92400e",
-                    fontWeight: 500,
-                    textAlign: "center",
-                    padding: 20,
+                    objectFit: "cover",
                   }}
-                >                  [ your headshot here ]
-                </div>
+                />
               </div>
             </div>
           </div>
