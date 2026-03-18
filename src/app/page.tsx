@@ -243,13 +243,14 @@ export default function CaseyBarrSite() {
                   marginBottom: 28,
                 }}
               >
-                I&apos;ve spent a decade getting Fortune 500s to actually use the
-                software they buy. 60+ deployments across Boeing, Nike, Morgan
-                Stanley, you name it. Somewhere around deployment forty I started
-                noticing: every automation I activated made someone&apos;s role
-                smaller. So now I&apos;m building for both sides.{" "}
+                I help organizations and the people inside them navigate
+                change and come out stronger. 60+ enterprise deployments across
+                Boeing, Nike, Morgan Stanley, and more. I&apos;ve learned that
+                the companies that win aren&apos;t the ones that just adopt new
+                technology. They&apos;re the ones that make their people
+                antifragile.{" "}
                 <strong style={{ color: "#92400e" }}>
-                  Technology changes systems. People change everything else.
+                  Systems change fast. People have to change faster.
                 </strong>
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>

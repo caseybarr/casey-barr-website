@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Casey Barr — Enterprise AI Activation & Builder",
+  title: "Casey Barr — Helping Organizations & People Become Antifragile",
   description:
-    "I've spent a decade getting Fortune 500s to actually use the software they buy. Now I'm building for both sides of the AI transition.",
+    "I help organizations and the people inside them navigate change and come out stronger. 60+ enterprise deployments. Building Shortlist.ai, Do North Strategy, and The Forge.",
   openGraph: {
-    title: "Casey Barr — Enterprise AI Activation & Builder",
+    title: "Casey Barr — Helping Organizations & People Become Antifragile",
     description:
-      "60+ enterprise deployments across Boeing, Nike, Morgan Stanley. Building Shortlist.ai, Do North Strategy, and The Forge.",
+      "I help organizations and the people inside them navigate change and come out stronger. 60+ enterprise deployments across Boeing, Nike, Morgan Stanley, and more.",
     type: "website",
   },
 };
